@@ -5,34 +5,33 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: gray;
 }
 
-.board{
+#board{
     background-color: rgb(30, 101, 255);
-    width: 350px;
-    height: 250px;
+    width: 490px;
+    height: 360px;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.column{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    flex: 1;
-}
-
-.pieces{
-    width: 30px;
-    height: 30px;
-    background-color: white;
+.piece{
+    margin: 5px 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
 }
 
-.pieces.player1{
+.piece.player1{
     background-color: red;
 }
 
-.pieces.player2{
+.piece.player2{
     background-color: yellow;
+}
+
+.piece.player1.win, .piece.player2.win{
+    background-color: white;
 }
