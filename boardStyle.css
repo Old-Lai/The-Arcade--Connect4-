@@ -2,13 +2,18 @@ body{
     margin: 0px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: gray;
 }
 
-#board{
+button{
+    margin: 5px;
+}
+
+.board{
     background-color: rgb(30, 101, 255);
     width: 490px;
     height: 360px;
@@ -34,4 +39,15 @@ body{
 
 .piece.player1.win, .piece.player2.win{
     background-color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+.titleAndMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
