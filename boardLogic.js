@@ -460,12 +460,14 @@ menuEle.addEventListener('click', function(event){
 })
 
 resetButton.addEventListener('click', function(){
-    if(winIntervalId){
-        clearInterval(winIntervalId);
+    if(!state.computerThinking){
+        if(winIntervalId){
+            clearInterval(winIntervalId);
+        }
+        switchDisplay();
+        if(state.computerPlayAs === -1){
+            state.computerPlayAs = 1;
+        }
+        changeMode();
     }
-    switchDisplay();
-    if(state.computerPlayAs === -1){
-        state.computerPlayAs = 1;
-    }
-    changeMode();
 })
